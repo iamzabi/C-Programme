@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int factorial(int j);
+int main()
+{
+    int n, r, temp, random, fact, result;
+    
+    printf("enter the value of n and r\n");
+    scanf("%d %d", &n, &r);
+    
+    temp= factorial(n);
+    
+    random= factorial(n-r);
+    
+    fact= factorial(r);
+    
+    result= temp/(random*fact);
+    
+    printf("the combination factorial is %d", result);
+    
+    
+}
+
+int factorial(int j)
+{
+    
+    int temp=1;
+    
+    for( int c=1; c<=j; c++)
+    {
+            temp= temp*c;
+    }
+    return temp;
+}
